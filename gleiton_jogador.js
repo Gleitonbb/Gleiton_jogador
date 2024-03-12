@@ -5,8 +5,9 @@ const palmeiras = document.querySelector("#timepal")
 const botao1 = document.querySelector("#botao1")
 const CaixaPontuacao = document.querySelector("#pontuacao1")
 const textoTimeEscolhido = document.querySelector("#TextoEscolhido")
- 
-
+const somaPontuacao = document.querySelector("#pontuacaoTotal")
+const pontuacao10A = 10
+const semPontuacaoA = 0
 const DoisTimes = [flamengo, palmeiras]
 DoisTimes.map((upu)=>{
     upu.addEventListener("click",(evt)=>{
@@ -27,19 +28,22 @@ botao1.addEventListener("click",(evt)=>{
             caixaTimeEscolhido.appendChild(upu.cloneNode())
         }
         pontuacaoTimeEscolhido() 
+        pontuacaoTotal()
     })
     timeSelecionadoretorno.map((upu, pos)=>{
      caixaMae1.appendChild(upu)
     })
+
 })
   const VencedorDaRodada = `Palmeiras`
 const pontuacaoTimeEscolhido = () =>{
-   const ElementosDentroDaCaixa = [...document.querySelectorAll(".selecionado")]
+
+ const ElementosDentroDaCaixa = [...document.querySelectorAll(".selecionado")]
 ElementosDentroDaCaixa.map((upu, pos)=>{
     if(VencedorDaRodada === upu.textContent){
-       CaixaPontuacao.innerHTML = "Pontos"+"<br/>"+10
+       CaixaPontuacao.innerHTML = pontuacao10A
     }else{
-        CaixaPontuacao.innerHTML = "Pontuação"
+        CaixaPontuacao.innerHTML = semPontuacaoA
     }
 }) 
 }
@@ -57,6 +61,8 @@ const tirarSelecionado1  = () =>{
  })
 }
 // Time 02--------------------------------------
+const pontuacao10B = 10
+const semPontuacaoB = 0
 const caixaMae2 = document.querySelector("#caixaMae02")
 const timeSelecionado2 = document.querySelector("#caixaescolhido2")
 const caixaPontuacao2 = document.querySelector("#pontuacao2")
@@ -83,14 +89,17 @@ DoisTimes2.map((upu)=>{
             timeSelecionado2.appendChild(upu)
         }
         if(upu.textContent === TmVencedorDaRodada){
-         caixaPontuacao2.innerHTML = "Pontos"+"<br/>"+10
+         caixaPontuacao2.innerHTML = pontuacao10B
+        
         }else{
-         caixaPontuacao2.innerHTML = "Pontuação"
+         caixaPontuacao2.innerHTML = semPontuacaoB
         }
       })
       clubeSelecionado2.map((upu)=>{
         caixaMae2.appendChild(upu)
       })
+
+      pontuacaoTotal()
   })
   const tirarSelecionado2 = () =>{
     Vasco.addEventListener("click",(evt)=>{
@@ -106,6 +115,8 @@ DoisTimes2.map((upu)=>{
   }
 
 //Time 03------------------------------------------------
+const pontuacao10C = 10
+const semPontuacaoC = 0
 const TimeDaRodada = "Internacional"
 const caixaTimeEscolhido3 = document.querySelector("#caixaescolhido3")
 const caixaMae3 = document.querySelector("#caixaMae03")
@@ -132,19 +143,22 @@ botao3.addEventListener("click",(evt)=>{
            caixaTimeEscolhido3.appendChild(upu) 
         }
         if(upu.textContent === TimeDaRodada){
-           caixaPontuacao3.innerHTML = "Pontuação"+"<br/>"+ 10
+           caixaPontuacao3.innerHTML = pontuacao10C
+        }else{
+           caixaPontuacao3.innerHTML = semPontuacaoC
         }
     })
     timeNaoSelecionado.map((upu, pos)=>{
         caixaMae3.appendChild(upu)
     })
+    pontuacaoTotal()
 })
 const timeSelecionado3 = () =>{
     Internacional.addEventListener("click",(evt)=>{
         if(Internacional.click){
             Fluminense.classList.remove("selecionado3")
         }
-    })
+    }) 
     Fluminense.addEventListener("click",(evt)=>{
         if(Fluminense.click){
             Internacional.classList.remove("selecionado3")
@@ -152,3 +166,21 @@ const timeSelecionado3 = () =>{
         }
     })
 }
+const pontuacaoTotal = () =>{
+ const pontuacao1 = document.querySelector("#pontuacao1")
+ const pontuacao2 = document.querySelector("#pontuacao2")
+ const pontuacao3 = document.querySelector("#pontuacao3")
+
+ const to1 = parseInt( pontuacao1.textContent )
+ const to2 = parseInt( pontuacao2.textContent )
+ const to3 = parseInt( pontuacao3.textContent )
+ console.log(to1)
+ console.log(to2)
+ console.log(to3)
+
+ const total = to1 + to2 + to3
+ somaPontuacao.innerHTML = total
+ 
+
+}
+
