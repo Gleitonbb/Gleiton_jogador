@@ -27,8 +27,11 @@ botao1.addEventListener("click",(evt)=>{
         }else if(caixaTimeEscolhido.innerHTML === ""){
             caixaTimeEscolhido.appendChild(upu.cloneNode())
         }
+      
         pontuacaoTimeEscolhido() 
         pontuacaoTotal()
+        
+        console.log(caixaMae1.firstElementChild.textContent)
     })
     timeSelecionadoretorno.map((upu, pos)=>{
      caixaMae1.appendChild(upu)
@@ -174,13 +177,17 @@ const pontuacaoTotal = () =>{
  const to1 = parseInt( pontuacao1.textContent )
  const to2 = parseInt( pontuacao2.textContent )
  const to3 = parseInt( pontuacao3.textContent )
- console.log(to1)
- console.log(to2)
- console.log(to3)
-
  const total = to1 + to2 + to3
- somaPontuacao.innerHTML = total
+ if(isNaN(total)){
+    somaPontuacao.innerHTML = 'Aguarde o total de Pontuação'
+ }else{
+   somaPontuacao.innerHTML = total 
+ }
+
+
+
  
+
 
 }
 
