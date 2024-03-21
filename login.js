@@ -5,6 +5,7 @@ class Login{
     static nomelogado = null
     static acessologado = null
     static estilocss = null
+    
     static config = {
         cor:"048",
         img:"./imagem/logoelefante.png"
@@ -17,6 +18,8 @@ class Login{
         if(config!=null){
             this.config = config
         }
+        this.callback_ok=()=>{callback_ok()}
+        this.callback_naook=()=>{callback_naook()}
     //   this.endpoint += `?matricula=${mat}&senha=${pas}`
       this.estilocss =
 ".fundoLogin{ display: flex;  justify-content: center;  align-items: center; width: 100%; height: 100vh; position: absolute;  top: 0px; left: 0px; background-color: rgba(0,0,0,0.75);}"+
@@ -140,9 +143,8 @@ document.head.appendChild(styleEstilo )
             this.matlogado = null
             this.nomelogado = null
             this.acessologado = null
-            alert("senha invalido")
-            
-        }
+            alert("senha incorreta")
+         }
        })
         // if(mat == "123" && pas == "321"){
         //     return true
