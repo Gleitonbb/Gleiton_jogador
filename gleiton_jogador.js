@@ -30,7 +30,7 @@ botao1.addEventListener("click",(evt)=>{
       
         pontuacaoTimeEscolhido() 
         pontuacaoTotal()
-        
+
         console.log(caixaMae1.firstElementChild.textContent)
     })
     timeSelecionadoretorno.map((upu, pos)=>{
@@ -183,11 +183,39 @@ const pontuacaoTotal = () =>{
  }else{
    somaPontuacao.innerHTML = total 
  }
-
-
-
- 
-
-
 }
 
+// -------------------Placar dos Jogos001--------------------
+
+        const caixacaixaPlacar1 = document.querySelector("#caixaPlacar1")
+        const caixaResultadoAposta = document.querySelector("#caixaResultadoAposta1")
+        const timeResultado1 = document.querySelector("#TimePlacar1")
+        const timeResultado2 = document.querySelector("#TimePlacar2")
+
+        const botaoResultado = document.querySelector("#botaoAposta")
+
+        let FlamengoResultado = "0"
+        let PalmeirasResultado = "0"
+
+        botaoResultado.addEventListener("click",(evt)=>{
+             const inpultResultado1 = document.querySelector("#time1").value
+             const inpultResultado2 = document.querySelector("#time2").value
+             
+             caixaResultadoAposta.innerHTML = `Resultado escolhido<br/><br/> ${timeResultado1.textContent}-${inpultResultado1}<br/> ${timeResultado2.textContent}-${inpultResultado2}`
+             console.log(caixaResultadoAposta)
+        
+        })
+        
+// -------------------Placar dos Jogos002----------------------
+     
+    const caixacaixaPlacar2 = document.querySelector("#caixaPlacar2")
+    const caixaResultadoAposta2 = document.querySelector("#caixaResultadoAposta2")
+    const timeResultado3 = document.querySelector("#TimePlacar3")
+    const timeResultado4 = document.querySelector("#TimePlacar4")
+    const botaoResultado2 = document.querySelector("#botaoAposta2")
+
+    botaoResultado2.addEventListener("click",(evt)=>{
+    const inputResultado3 = document.querySelector("#time3").value
+    const inputResultado4 = document.querySelector("#time4").value
+    caixaResultadoAposta2.innerHTML = `Resultado escolhido<br/>${timeResultado3.textContent}-${inputResultado3}<br/>${timeResultado4.textContent}-${inputResultado4}`
+})
