@@ -164,7 +164,15 @@ document.head.appendChild(styleEstilo )
     }
 
 
-export {Login}
+// export {Login}
 
 
 
+
+
+
+
+
+//https://github.com/Gleitonbb/gleiton_jogador/blob/main/login.js
+
+//https://cdn.jsdelivr.net/gh/Gleitonbb/gleiton_jogador/login.js
