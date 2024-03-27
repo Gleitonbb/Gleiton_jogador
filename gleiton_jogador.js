@@ -1,3 +1,4 @@
+
 let caixaTimeEscolhido = document.querySelector("#caixaEscolido")
 const caixaMae1 = document.querySelector("#caixaMae01")
 const flamengo = document.querySelector("#timefla")
@@ -81,7 +82,7 @@ DoisTimes2.map((upu)=>{
         tirarSelecionado2()
     })
 })
-  const TmVencedorDaRodada = "São Paulo"
+  const TmVencedorDaRodada = "S.Paulo"
   botao2.addEventListener("click",(evt)=>{
     const clubeSelecionado = [...document.querySelectorAll(".selecionado2")]
     const clubeSelecionado2 = [...document.querySelectorAll(".time2:not(.selecionado2)")]
@@ -194,17 +195,37 @@ const pontuacaoTotal = () =>{
 
         const botaoResultado = document.querySelector("#botaoAposta")
 
-        let FlamengoResultado = "0"
-        let PalmeirasResultado = "0"
+        // let FlamengoResultado = "0"
+        // let PalmeirasResultado = "0"
 
         botaoResultado.addEventListener("click",(evt)=>{
              const inpultResultado1 = document.querySelector("#time1").value
              const inpultResultado2 = document.querySelector("#time2").value
-             
-             caixaResultadoAposta.innerHTML = `Resultado escolhido<br/><br/> ${timeResultado1.textContent}-${inpultResultado1}<br/> ${timeResultado2.textContent}-${inpultResultado2}`
+
+             caixaResultadoAposta.innerHTML = `${timeResultado1.textContent}-${inpultResultado1}<br/> ${timeResultado2.textContent}-${inpultResultado2}` 
              console.log(caixaResultadoAposta)
-        
-        })
+             resultado() 
+             
+             
+         })
+
+         const resultado = () =>{
+        let Flamengo = 3
+        let Palmeiras = 0
+        const pon1 = 3
+        const pon2 = 0
+        const caixaResultado = document.querySelector("#caixaResultadoAposta1")
+        const caixaPontos1 = document.querySelector("#caixaPontuacao1")
+        if(caixaResultado.textContent === `Flamengo -${Flamengo}` && caixaResultado.textContent === `Palmeiras -${Palmeiras}`){
+            caixaPontos1.innerHTML = pon1
+        }else{
+            caixaPontos1.innerHTML = pon2
+        }
+       
+        console.log(caixaResultado.textContent)
+        console.log(`Flamengo -${Flamengo}`)
+        console.log(`Palmeiras -${Palmeiras}`)
+         }
         
 // -------------------Placar dos Jogos002----------------------
      
