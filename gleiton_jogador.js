@@ -240,3 +240,4 @@ const pontuacaoTotal = () =>{
     const inputResultado4 = document.querySelector("#time4").value
     caixaResultadoAposta2.innerHTML = `Resultado escolhido<br/>${timeResultado3.textContent}-${inputResultado3}<br/>${timeResultado4.textContent}-${inputResultado4}`
 })
+
