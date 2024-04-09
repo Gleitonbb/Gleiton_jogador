@@ -6,76 +6,45 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="login_style.css">
     <link rel="stylesheet" href="gleiton_style.css">
-    <!-- <script src="https://cdn.jsdelivr.net/gh/Gleitonbb/gleiton_jogador/login.js"></script> -->
+   
 </head>
 <body>
+   <h1>Escolha seu Time</h1>
     <main>
-            <div id="caixalider1">
-                <div id="caixaMae01" class="caixaMae">
-                <div id="timefla" class="time ti">Flamengo <img class="imagem" src="imagem/flamengo.png" alt=""></div>
-                <div id="timepal" class="time ti">Palmeiras</div>
-                </div>
-                <button id="botao1" class="botao">Escolher</button>
-                <div id="caixaEscolido" class="caixaEscolido">Time Escolhido</div>
-                <p id="pontuacao1" class="pontuacao">Pontuação</p>
-            </div>
-     <!-- ------------------------------------- -->
-            <div id="caixalider2">
-                <div id="caixaMae02" class="caixaMae">
-                <div id="timeVas" class="time2 ti">Vasco</div>
-                <div id="timeSaoP" class="time2 ti">S.Paulo</div>
-                </div>
-                <button id="botao2" class="botao">Escolher</button>
-                <div id="caixaescolhido2" class="caixaEscolido">Time Escolhido</div>
-                <p id="pontuacao2" class="pontuacao">Pontuação</p>
-            </div>
-      <!------------------------------------------>
-             <div id="caixalider3">
-                 <div id="caixaMae03" class="caixaMae">
-                    <div id="timeInter" class="time3 ti">Internacional</div>
-                    <div id="timeFlu" class="time3 ti">Fluminense</div>
-                 </div>
-                 <button id="botao3" class="botao">Escolher</button>
-                 <div id="caixaescolhido3" class="caixaEscolido">Time Escolhido</div>
-                 <p id="pontuacao3" class="pontuacao">Pontuação</p>
-                 </div>
-             </div>
-             <div id="pontuacaoTotal" class="pontuacaoTotal"></div>
-
-     <!-- --------Jogadores artilheiros da Rodada 001------------       -->
-           <h2 id="plac">Placar do jogo</h2>
-           <div id="caixaControlePlacar1" class="caixaControlePlacar">
-              <div id="caixaPlacar1" class="caixaPlacar">
-                 <div id="TimePlacar1" class="TimePlacar">Flamengo
-                    <input type="number" name="time1" id="time1" value="0">
-                 </div>
-                 <div id="TimePlacar2" class="TimePlacar">Palmeiras
-                    <input type="number" name="time2" id="time2" value="0">
-                 </div>
-             </div>
-             <button id="botaoAposta" class="botaoR">jogar</button>
-            <div id="caixaResultadoAposta1"></div>
-            <div id="caixaPontuacao1" class="caixaPontuacao"></div>
-         </div>
-     <!-- --------Jogadores artilheiros da Rodada 002------------       -->
-         
-         <div id="caixaControlePlacar2" class="caixaControlePlacar">
-            <div id="caixaPlacar2" class="caixaPlacar">
-               <div id="TimePlacar3" class="TimePlacar">Vasco
-                  <input type="number" name="time3" id="time3" value="0">
-               </div>
-               <div id="TimePlacar4" class="TimePlacar">S.Paulo
-                  <input type="number" name="time4" id="time4" value="0">
-               </div>
-           </div>
-           <button id="botaoAposta2" class="botaoR">jogar</button>
-          <div id="caixaResultadoAposta2"></div>
-          <div id="caixaPontuacao2" class="caixaPontuacao"></div>
+      <!-- -------------------times 1 ------------------------------------------ -->
+      <div id="caixaGeral01" class="caixaGeral">
+         <div id="caixaComando01" class="caixaComando">
+            <div id="time1" class="time ti">time1</div>
+            <div id="time2" class="time ti">time2</div>
+          </div>
+           <button id="botao01" class="Botao">Escolher</button>
+         <div id="caixaEscolhido01" class="caixaComando"></div>
        </div>
-    </main>
-           
+       <div id="caixaPontuacao01" class="caixaPontuacao">Pontuação</div>
+       <!-- -------------------times 2 ------------------------------------------ -->
+        
+         <div id="caixaGeral02" class="caixaGeral">
+         <div id="caixaComando02" class="caixaComando">
+            <div id="time3" class="time ti">time3</div>
+            <div id="time4" class="time ti">time4</div>
+          </div>
+           <button id="botao01" class="Botao">Escolher</button>
+         <div id="caixaEscolhido02" class="caixaComando"></div>
+       </div>
+       <div id="caixaPontuacao02" class="caixaPontuacao">Pontuação</div>
+       <!-- --------------------times 3 ------------------------------------------ -->
+       <div id="caixaGeral03" class="caixaGeral">
+         <div id="caixaComando03" class="caixaComando">
+            <div id="time4" class="time ti">time1</div>
+            <div id="time5" class="time ti">time2</div>
+          </div>
+           <button id="botao03" class="Botao">Escolher</button>
+         <div id="caixaEscolhido03" class="caixaComando"></div>
+       </div>
+       <div id="caixaPontuacao03" class="caixaPontuacao">Pontuação</div>
+   </main>
    
     <script src="gleiton_jogador.js"></script>
-    <!-- <script src="aulaa141.js" type="module"></script> -->
+  
 </body>
 </html>
