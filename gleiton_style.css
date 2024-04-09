@@ -34,6 +34,18 @@ main{
     flex-direction: column;
 
 }
+.caixaEscolhido{
+    border: 3px solid rgb(226, 86, 86);
+    background-color: rgb(83, 83, 83);
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.562);
+    border-radius: 25px;
+    width: 35vw;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .time{
     border: 3px solid rgb(230, 187, 48);
     color: rgb(240, 228, 205);
@@ -75,5 +87,27 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+#pontuacaoTotal{
+border: 5px solid rgb(248, 194, 94);
+background-color: rgb(71, 70, 70);
+box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.466);
+color: rgb(235, 148, 108);
+font-size: 2em;
+margin: 40px;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.selecionado{
+    border: 3px solid rgb(241, 218, 141);
+    color: rgb(248, 194, 94);
+    width: 93%;
+    height: 82px;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.514);
+
 }
 
