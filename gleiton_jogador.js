@@ -81,8 +81,9 @@ botao3.addEventListener("click",(evt)=>{
 const enviarBancoDados = () =>{
      let dados = {
         timeEscolhido01,
-        timeEscolhido02,
-        timeEscolhido03
+        // timeEscolhido02,
+        // timeEscolhido03
+
     }
    let cabecalho = {
     method: "POST",
