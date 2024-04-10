@@ -78,7 +78,7 @@ const enviarBack = () =>{
     let dados = {
         timeEscolhido01,
         timeEscolhido02,
-        timeEscolhido03,
+        timeEscolhido03
     }
    let cabecalho = {
     method: "POST",
@@ -87,7 +87,7 @@ const enviarBack = () =>{
     },
     body:JSON.stringify(dados)
 }
-    const endPoint = ""
+    const endPoint = "http://localhost:3000/gleitonjogador"
     fetch(endPoint, cabecalho)
     .then(res => res.json())
     .then(enviar=>{
