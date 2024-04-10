@@ -78,7 +78,7 @@ const enviarBack = () =>{
     let dados = {
         timeEscolhido01,
         timeEscolhido02,
-        timeEscolhido03
+        timeEscolhido03,
     }
    let cabecalho = {
     method: "POST",
