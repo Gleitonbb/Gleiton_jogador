@@ -24,7 +24,7 @@ botao01.addEventListener("click",(evt)=>{
 
         console.log(timeEscolhido01)
         let dados = {
-            timeEscolhido01,
+            timeEscolhido01
             
           }
        let cabecalho = {
@@ -64,7 +64,7 @@ botao2.addEventListener("click",(evt)=>{
         let timeEscolhido02 = upu.textContent
         console.log(timeEscolhido02)
         let dados = {
-            timeEscolhido02,
+            timeEscolhido02
             
           }
        let cabecalho = {
@@ -103,7 +103,7 @@ botao3.addEventListener("click",(evt)=>{
         console.log(timeEscolhido03)
         //-------------enviar para banco de dados-----------
         let dados = {
-            timeEscolhido03,
+            timeEscolhido03
             
           }
        let cabecalho = {
@@ -122,25 +122,6 @@ botao3.addEventListener("click",(evt)=>{
    })
 })
  
-
-const enviarBancoDados = () =>{
-     let dados = {
-        timeEscolhido01
-      
-
-    }
-   let cabecalho = {
-    method: "POST",
-    headers:{"Content-Type":"application/json"},
-    body:JSON.stringify(dados)
-}
-    const endPoint = "http://localhost:3000/gleitonjogador"
-    fetch(endPoint, cabecalho)
-    .then(res => res.json())
-    .then(enviar=>{
-        console.log(enviar)
-    })
-}
 
 
 
