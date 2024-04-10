@@ -18,7 +18,7 @@ const conectar = async ()=>{
 const enviarPbancoDados = async (jog)=>{
     try{
       const conexao = await conectar()
-      const sql = 'INSERT INTO jogador ( timeEscolhido01,timeEscolhido02,timeEscolhido03,) VALUES (?,?,?)'
+      const sql = 'INSERT INTO jogador (timeEscolhido01,timeEscolhido02,timeEscolhido03) VALUES (?,?,?)'
       const valores = [jog.timeEscolhido01,jog.timeEscolhido02,jog.timeEscolhido03]
       await conexao.query(sql, valores)
       console.log('dados inseridos no banco de dados')

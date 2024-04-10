@@ -21,8 +21,23 @@ botao01.addEventListener("click",(evt)=>{
     pegarTime.map((upu)=>{
         // aqui está vindo os times vindo do html
         let timeEscolhido01 = upu.textContent
+
         console.log(timeEscolhido01)
-        enviarBancoDados()
+        let dados = {
+            timeEscolhido01,
+            
+          }
+       let cabecalho = {
+        method: "POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify(dados)
+    }
+        const endPoint = "http://localhost:3000/gleitonjogador"
+        fetch(endPoint, cabecalho)
+        .then(res => res.json())
+        .then(enviar=>{
+            console.log(enviar)
+        })
 
     })
 })
@@ -48,6 +63,21 @@ botao2.addEventListener("click",(evt)=>{
         // aqui está vindo os times vindo do html
         let timeEscolhido02 = upu.textContent
         console.log(timeEscolhido02)
+        let dados = {
+            timeEscolhido02,
+            
+          }
+       let cabecalho = {
+        method: "POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify(dados)
+    }
+        const endPoint = "http://localhost:3000/gleitonjogador"
+        fetch(endPoint, cabecalho)
+        .then(res => res.json())
+        .then(enviar=>{
+            console.log(enviar)
+        })
 
     
     })
@@ -72,6 +102,21 @@ botao3.addEventListener("click",(evt)=>{
         let timeEscolhido03 = upu.textContent
         console.log(timeEscolhido03)
         //-------------enviar para banco de dados-----------
+        let dados = {
+            timeEscolhido03,
+            
+          }
+       let cabecalho = {
+        method: "POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify(dados)
+    }
+        const endPoint = "http://localhost:3000/gleitonjogador"
+        fetch(endPoint, cabecalho)
+        .then(res => res.json())
+        .then(enviar=>{
+            console.log(enviar)
+        })
        
 
    })
@@ -80,16 +125,13 @@ botao3.addEventListener("click",(evt)=>{
 
 const enviarBancoDados = () =>{
      let dados = {
-        timeEscolhido01,
-        // timeEscolhido02,
-        // timeEscolhido03
+        timeEscolhido01
+      
 
     }
    let cabecalho = {
     method: "POST",
-    headers:{
-        "Content-Type":"application/json"
-    },
+    headers:{"Content-Type":"application/json"},
     body:JSON.stringify(dados)
 }
     const endPoint = "http://localhost:3000/gleitonjogador"
