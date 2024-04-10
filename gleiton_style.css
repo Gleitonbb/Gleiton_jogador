@@ -102,7 +102,23 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-.selecionado{
+.selecionado01{
+    border: 3px solid rgb(241, 218, 141);
+    color: rgb(248, 194, 94);
+    width: 93%;
+    height: 82px;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.514);
+
+}
+.selecionado02{
+    border: 3px solid rgb(241, 218, 141);
+    color: rgb(248, 194, 94);
+    width: 93%;
+    height: 82px;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.514);
+
+}
+.selecionado03{
     border: 3px solid rgb(241, 218, 141);
     color: rgb(248, 194, 94);
     width: 93%;
