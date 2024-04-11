@@ -10,6 +10,17 @@ let timee2 = ""
 let timee3 = ""
 let pontuacao = 10
 
+const SalvarTimeEscolhido = (timeEscolhido01) =>{
+    localStorage.setItem("timeEscolhido", timeEscolhido01 )
+}
+
+const carregarTimeEscolhido = () =>{
+    const timeEscolhido = localStorage.getItem("timeEscolhido")
+    if(timeEscolhido){
+    caixaEscolhido.innerHTML = `Time escolhido</br> <strong>${timeEscolhido}</strong>`
+    }
+}
+carregarTimeEscolhido()
 time.map((upu)=>{
     upu.addEventListener("click",(evt)=>{
         const timeClicado = evt.target
@@ -41,6 +52,7 @@ botao01.addEventListener("click",(evt)=>{
                   console.log(enviar)
                   console.log(timeEscolhido01)
                   caixaEscolhido.innerHTML = `Time escolhido</br> <strong>${timeEscolhido01}</strong>`
+                  SalvarTimeEscolhido(timeEscolhido01)
               })
 
         console.log(timeEscolhido01)
