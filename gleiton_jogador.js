@@ -13,7 +13,11 @@ let pontuacao = 10
 time.map((upu)=>{
     upu.addEventListener("click",(evt)=>{
         const timeClicado = evt.target
-       timeClicado.classList.toggle("selecionado01")
+        timeClicado.classList.toggle("selecionado01")
+        time.forEach(Div=>{
+           if(Div !== timeClicado)
+           Div.classList.remove("selecionado01")
+        })
     })
 })
 botao01.addEventListener("click",(evt)=>{
@@ -29,11 +33,14 @@ botao01.addEventListener("click",(evt)=>{
               headers:{"Content-Type":"application/json"},
               body:JSON.stringify(dados)
           }
-              const endPoint = "http://localhost:3000/gleitonjogador"
+              const endPoint = "http://localhost:3000/gleitonjogador01"
               fetch(endPoint, cabecalho)
               .then(res => res.json())
               .then(enviar=>{
+    //s dados ja estão vindo do back end aqui
                   console.log(enviar)
+                  console.log(timeEscolhido01)
+                  caixaEscolhido.innerHTML = `Time escolhido</br> <strong>${timeEscolhido01}</strong>`
               })
 
         console.log(timeEscolhido01)
@@ -53,6 +60,10 @@ time2.map((upu)=>{
     upu.addEventListener("click",(evt)=>{
         const timeClicado2 = evt.target
        timeClicado2.classList.toggle("selecionado02")
+       time2.forEach(Div02=>{
+        if(Div02 !== timeClicado2)
+        Div02.classList.remove("selecionado02")
+       })
     })
 })
 botao2.addEventListener("click",(evt)=>{
@@ -68,11 +79,13 @@ botao2.addEventListener("click",(evt)=>{
               headers:{"Content-Type":"application/json"},
               body:JSON.stringify(dados)
           }
-              const endPoint = "http://localhost:3000/gleitonjogador"
+              const endPoint = "http://localhost:3000/gleitonjogador02"
               fetch(endPoint, cabecalho)
               .then(res => res.json())
               .then(enviar=>{
+                //s dados ja estão vindo do back end aqui
                   console.log(enviar)
+                  caixaEscolhido2.innerHTML = `Time escolhido</br><strong> ${timeEscolhido02}</strong>`
               })
         console.log(timeEscolhido02)
       
@@ -89,6 +102,10 @@ time3.map((upu)=>{
     upu.addEventListener("click",(evt)=>{
         const timeClicado3 = evt.target
        timeClicado3.classList.toggle("selecionado03")
+       time3.forEach(Div03=>{
+        if(Div03 !== timeClicado3)
+        Div03.classList.remove("selecionado03")
+       })
     })
 })
 botao3.addEventListener("click",(evt)=>{
@@ -104,11 +121,13 @@ botao3.addEventListener("click",(evt)=>{
               headers:{"Content-Type":"application/json"},
               body:JSON.stringify(dados)
           }
-              const endPoint = "http://localhost:3000/gleitonjogador"
+              const endPoint = "http://localhost:3000/gleitonjogador03"
               fetch(endPoint, cabecalho)
               .then(res => res.json())
               .then(enviar=>{
+                //s dados ja estão vindo do back end aqui
                   console.log(enviar)
+                  caixaEscolhido3.innerHTML = `Time escolhido</br> <strong>${timeEscolhido03}</strong>`
               })
         console.log(timeEscolhido03)
         //-------------enviar para banco de dados-----------

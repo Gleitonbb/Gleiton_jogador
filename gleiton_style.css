@@ -37,7 +37,9 @@ main{
 .caixaEscolhido{
     border: 3px solid rgb(226, 86, 86);
     background-color: rgb(83, 83, 83);
+    color: rgb(250, 234, 205);
     box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.562);
+    font-size: 2em;
     border-radius: 25px;
     width: 35vw;
     height: 200px;
