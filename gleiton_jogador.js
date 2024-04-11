@@ -21,7 +21,20 @@ botao01.addEventListener("click",(evt)=>{
     pegarTime.map((upu)=>{
         // aqui está vindo os times vindo do html
         let timeEscolhido01 = upu.textContent
-        timesSelecionados(timeEscolhido01)
+        let dados = {
+            timeEscolhido01
+               }
+             let cabecalho = {
+              method: "POST",
+              headers:{"Content-Type":"application/json"},
+              body:JSON.stringify(dados)
+          }
+              const endPoint = "http://localhost:3000/gleitonjogador"
+              fetch(endPoint, cabecalho)
+              .then(res => res.json())
+              .then(enviar=>{
+                  console.log(enviar)
+              })
 
         console.log(timeEscolhido01)
     })
@@ -46,8 +59,21 @@ botao2.addEventListener("click",(evt)=>{
     const pegarTime2 = [...document.querySelectorAll(".selecionado02")]
     pegarTime2.map((upu)=>{
         // aqui está vindo os times vindo do html
-        let timeEscolhido02 = upu.textContent
-        timesSelecionados(timeEscolhido02)
+        const timeEscolhido02 = upu.textContent
+        let dados = {
+            timeEscolhido02
+               }
+             let cabecalho = {
+              method: "POST",
+              headers:{"Content-Type":"application/json"},
+              body:JSON.stringify(dados)
+          }
+              const endPoint = "http://localhost:3000/gleitonjogador"
+              fetch(endPoint, cabecalho)
+              .then(res => res.json())
+              .then(enviar=>{
+                  console.log(enviar)
+              })
         console.log(timeEscolhido02)
       
     })
@@ -70,31 +96,44 @@ botao3.addEventListener("click",(evt)=>{
     pegarTime3.map((upu)=>{
         // aqui está vindo os times vindo do html
         let timeEscolhido03 = upu.textContent
-        timesSelecionados(timeEscolhido03)
+        let dados = {
+            timeEscolhido03
+               }
+             let cabecalho = {
+              method: "POST",
+              headers:{"Content-Type":"application/json"},
+              body:JSON.stringify(dados)
+          }
+              const endPoint = "http://localhost:3000/gleitonjogador"
+              fetch(endPoint, cabecalho)
+              .then(res => res.json())
+              .then(enviar=>{
+                  console.log(enviar)
+              })
         console.log(timeEscolhido03)
         //-------------enviar para banco de dados-----------
    
    })
 })
 
-const timesSelecionados = (timeEscolhido) =>{
-    let dados = {
-    timeEscolhido
-       }
-     let cabecalho = {
-      method: "POST",
-      headers:{"Content-Type":"application/json"},
-      body:JSON.stringify(dados)
-  }
-      const endPoint = "http://localhost:3000/gleitonjogador"
-      fetch(endPoint, cabecalho)
-      .then(res => res.json())
-      .then(enviar=>{
-          console.log(enviar)
-      })
 
-}
+// const timesSelecionados = (timeEscolhido) =>{
+//     let dados = {
+//     timeEscolhido
+//        }
+//      let cabecalho = {
+//       method: "POST",
+//       headers:{"Content-Type":"application/json"},
+//       body:JSON.stringify(dados)
+//   }
+//       const endPoint = "http://localhost:3000/gleitonjogador"
+//       fetch(endPoint, cabecalho)
+//       .then(res => res.json())
+//       .then(enviar=>{
+//           console.log(enviar)
+//       })
 
+// }
 
 
 

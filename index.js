@@ -15,21 +15,45 @@ const conectar = async ()=>{
     global.conexao = con
     return con
 }
-const enviarPbancoDados = async (jog)=>{
+const enviarPbancoDados01 = async (jog)=>{
     try{
       const conexao = await conectar()
-      const sql = 'INSERT INTO jogador (timeEscolhido01) VALUES (?)'
+      const sql = 'INSERT INTO jogador01 (timeEscolhido01) VALUES (?)'
       const valores = [jog.timeEscolhido01]
       await conexao.query(sql, valores)
       console.log('dados inseridos no banco de dados')
     }catch{
       console.log('erro ao conectar com o banco de dados', error)
     }
+  }
 
-}
+  const enviarPbancoDados02 = async (jog)=>{
+    try{
+      const conexao = await conectar()
+      const sql = 'INSERT INTO jogador02 (timeEscolhido02) VALUES (?)'
+      const valores = [jog.timeEscolhido02]
+      await conexao.query(sql, valores)
+      console.log('dados inseridos no banco de dados')
+    }catch{
+      console.log('erro ao conectar com o banco de dados', error)
+    }
+  }
+
+  const enviarPbancoDados03 = async (jog)=>{
+    try{
+      const conexao = await conectar()
+      const sql = 'INSERT INTO jogador03 (timeEscolhido03) VALUES (?)'
+      const valores = [jog.timeEscolhido03]
+      await conexao.query(sql, valores)
+      console.log('dados inseridos no banco de dados')
+    }catch{
+      console.log('erro ao conectar com o banco de dados', error)
+    }
+  }
 app.post('/gleitonjogador', (req, res)=>{
     const usuario = req.body
-    enviarPbancoDados(usuario)
+    enviarPbancoDados01(usuario)
+  
     res.json({message: 'dados recebido e inserido no banco de dados com sucesso'})
 })
 app.listen(porta, ()=>{console.log('servidor rodando')})
