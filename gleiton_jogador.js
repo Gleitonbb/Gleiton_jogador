@@ -68,6 +68,18 @@ const caixaEscolhido2 = document.querySelector("#caixaEscolhido02")
 const botao2 = document.querySelector("#botao02")
 //times e pontuação de quem ganhou
 
+
+const SalvarTimeEscolhido02 = (timeEscolhido02) =>{
+    localStorage.setItem("timeEscolhidoo", timeEscolhido02)
+}
+
+const carregarTimeEscolhidoo = () =>{
+    const timeEscolhidoo = localStorage.getItem("timeEscolhidoo")
+    if(timeEscolhidoo){
+        caixaEscolhido2.innerHTML = `Time escolhido</br><strong> ${timeEscolhidoo}</strong>`
+    }
+}
+carregarTimeEscolhidoo()
 time2.map((upu)=>{
     upu.addEventListener("click",(evt)=>{
         const timeClicado2 = evt.target
@@ -98,6 +110,7 @@ botao2.addEventListener("click",(evt)=>{
                 //s dados ja estão vindo do back end aqui
                   console.log(enviar)
                   caixaEscolhido2.innerHTML = `Time escolhido</br><strong> ${timeEscolhido02}</strong>`
+                  SalvarTimeEscolhido02(timeEscolhido02)
               })
         console.log(timeEscolhido02)
       
@@ -110,6 +123,17 @@ const caixaEscolhido3 = document.querySelector("#caixaEscolhido03")
 const botao3 = document.querySelector("#botao03")
 //times e pontuação de quem ganhou
 
+const SalvarTimeEscolhidooo = (timeEscolhido03) =>{
+    localStorage.setItem("timeEscolhidooo", timeEscolhido03 )
+}
+
+const carregarTimeEscolhidooo = () =>{
+    const timeEscolhidooo = localStorage.getItem("timeEscolhidooo")
+    if(timeEscolhidooo){
+    caixaEscolhido3.innerHTML = `Time escolhido</br> <strong>${timeEscolhidooo}</strong>`
+    }
+}
+carregarTimeEscolhidooo()
 time3.map((upu)=>{
     upu.addEventListener("click",(evt)=>{
         const timeClicado3 = evt.target
@@ -140,6 +164,7 @@ botao3.addEventListener("click",(evt)=>{
                 //s dados ja estão vindo do back end aqui
                   console.log(enviar)
                   caixaEscolhido3.innerHTML = `Time escolhido</br> <strong>${timeEscolhido03}</strong>`
+                  SalvarTimeEscolhidooo(timeEscolhido03)
               })
         console.log(timeEscolhido03)
         //-------------enviar para banco de dados-----------
