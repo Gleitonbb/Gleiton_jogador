@@ -20,8 +20,8 @@ const enviarPbancoDados01 = async (jog)=>{
       const conexao = await conectar()
       const sqlDelete01 = 'DELETE FROM jogador01'
       await conexao.query(sqlDelete01)
-      const sql = 'INSERT INTO jogador01 (timeEscolhido01) VALUES (?)'
-      const valores = [jog.timeEscolhido01]
+      const sql = 'INSERT INTO jogador01 (timeEscolhido01,pontuacaoparcial01) VALUES (?,?)'
+      const valores = [jog.timeEscolhido01, jog.pontuacaoparcial01]
       await conexao.query(sql, valores)
       console.log('dados inseridos no banco de dados')
     }catch (error){
@@ -34,8 +34,8 @@ const enviarPbancoDados01 = async (jog)=>{
     const conexao02 = await conectar()
     const sqlDelete02 = 'DELETE FROM jogador02'
     await conexao02.query(sqlDelete02)
-    const sql02 = 'INSERT INTO jogador02 (timeEscolhido02) VALUES (?)'
-    const valores02 = [jog02.timeEscolhido02]
+    const sql02 = 'INSERT INTO jogador02 (timeEscolhido02, pontuacaoparcial02) VALUES (?,?)'
+    const valores02 = [jog02.timeEscolhido02, jog02.pontuacaoparcial02]
     await conexao02.query(sql02, valores02)
     console.log('dados inseridos no banco de dados')
   }catch (error){
@@ -48,8 +48,8 @@ const enviarPbancoDados01 = async (jog)=>{
     const conexao03 = await conectar()
     const sqlDelete03 = 'DELETE FROM jogador03'
     await conexao03.query(sqlDelete03)
-    const sql03 = 'INSERT INTO jogador03 (timeEscolhido03) VALUES (?)'
-    const valores03 = [jog03.timeEscolhido03]
+    const sql03 = 'INSERT INTO jogador03 (timeEscolhido03, pontuacaoparcial03) VALUES (?,?)'
+    const valores03 = [jog03.timeEscolhido03, jog03.pontuacaoparcial03]
     await conexao03.query(sql03,valores03)
     console.log('dados inseridos no banco de dados com sucesso')
     }catch (error){

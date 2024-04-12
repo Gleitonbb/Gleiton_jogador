@@ -83,6 +83,8 @@ main{
     box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.562);
     border: 3px solid rgb(226, 86, 86);
     background-color: rgb(83, 83, 83);
+    color: rgb(235, 185, 129);
+    font-size: 1.5em;
     width: 100px;
     height: 100px;
     border-radius: 50%;
