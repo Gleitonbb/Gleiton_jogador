@@ -28,6 +28,7 @@ const enviarPbancoDados01 = async (jog)=>{
       console.log('erro ao conectar com o banco de dados', error)
     }
   }
+ 
 
   const enviarPbancoDados02 = async (jog02) =>{
     try{
@@ -56,6 +57,20 @@ const enviarPbancoDados01 = async (jog)=>{
     onsole.log('erro ao acessar o banco de dados',error)
     }
   }
+  const enviarPontuacaoTotal = async (jogTotal) =>{
+    try{
+     const conexaoTotal = await conectar()
+     const sqlDeletetotal = 'DELETE FROM pontuacaoTotal'
+     await conexaoTotal.query(sqlDeletetotal)
+     const sqlTotal = 'INSERT INTO pontuacaoTotal (total) VALUES (?)'
+     const valoresTotal = [jogTotal.total]
+     await conexaoTotal.query(sqlTotal, valoresTotal)
+     console.log('Dados inseridos no banco de dados com sucesso')
+    }catch (error){
+     console.log('erro ao conectar com banco de dados', (error))
+
+    }
+  }
 
 app.post('/gleitonjogador01', (req, res)=>{
     const usuario = req.body
@@ -74,8 +89,13 @@ app.post('/gleitonjogador03', (req, res)=>{
   enviarPbancoDados03(usuario03)
   res.json({message: 'dados recebido e inserido no banco de dados com sucesso'})
 })
+app.post('/gleitonTotal', (req, res)=>{
+  const usuarioTotal = req.body
+  enviarPontuacaoTotal(usuarioTotal)
+  res.json({mensage: 'dados recebido e inserido no banco de dados com sucesso'})
+})
 
-app.get('/gleitonjogador01', async(req, res)=>{
+app.get('/gleitonjog01', async(req, res)=>{
   try{
     const conexao = await conectar()
     const [rows, fields] = await conexao.execute('SELECT * FROM jogador01')
